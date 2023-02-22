@@ -13,7 +13,6 @@ interface IData {
 
 // main section
 function App() {
-
   // variable and state section
   const [rank, setRank] = useState(0);
   const [userData, setUserData] = useState<IData[]>(data);
@@ -54,7 +53,7 @@ function App() {
         <tbody className='table-body'>
           <AnimateLists>
             {userData.map((user: IData, index: number) => (
-              <Item key={user.userID} id={index + 1} user={user} ref={createRef()} />
+              <Item key={user.userID} id={index + 1} user={user} ref={createRef<HTMLTableRowElement>()} />
             ))}
           </AnimateLists>
         </tbody>

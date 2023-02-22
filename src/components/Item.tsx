@@ -9,10 +9,10 @@ interface IData {
 
 type Props = {
     user: IData,
-    id: number
+    id: number,
 }
 
-const Item = forwardRef(({ user, id }: Props, ref: any) => {
+const Item = forwardRef(({ user, id}: Props,ref:React.Ref<HTMLTableRowElement>) => {
     return (
         <>
             <tr ref={ref}>
