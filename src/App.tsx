@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     // set and clear interval here
-    const interval = setInterval(() => getRandomUser(), 111000);
+    const interval = setInterval(() => getRandomUser(), 1000);
     return () => {
       clearInterval(interval);
     };
