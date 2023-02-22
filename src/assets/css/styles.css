@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-wrapper {
+  height: 100%;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-wrapper table {
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  width: 47%;
+}
+
+.table-wrapper tr td {
+  text-align: center;
+  padding: 8px;
+}
+
+.table-wrapper tr th {
+  padding: 20px;
+  font-size: larger;
+  color: white;
+}
+
+.table-wrapper thead tr {
+  padding: 20px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  text-align: left;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.table-wrapper thead tr th,
+tbody tr td {
+  padding-left: 50px !important;
+}
+
+.table-wrapper thead tr th:last-child,
+tbody tr td:last-child {
+  text-align: right !important;
+  padding-right: 50px;
+}
+
+.table-wrapper tr:nth-child(even) {
+  background-color: white;
+}
+
+.table-wrapper tr:nth-child(odd) {
+  background-color: rgb(235, 235, 235);
+}
+
+.table-wrapper tr:hover {
+  background-color: #654fdd;
+  transition: all 0.6s ease-in-out;
+  color: white;
+}
+
+.table-wrapper .profile-wrapper {
+  position: relative;
+}
+
+.table-wrapper .profile-wrapper .img-wrapper img {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.profile-outer {
+  display: flex;
+  align-items: center;
+}
+
+.name-score-wrapper {
+  font-weight: bold;
+  font-size: large;
+}
+
+.name-wrapper {
+  padding-left: 12px;
+}
+
+.table-wrapper .profile-wrapper .rank-count {
+  position: absolute;
+  left: 40px;
+  bottom: 4px;
+  background-color: rgb(10, 73, 220);
+  color: white;
+  width: 20px;
+  border-radius: 50%;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 15px;
+}
+
+.table-wrapper .profile-wrapper .top-three-1 {
+  background-color: rgb(255, 255, 0) !important;
+  color: #c5512e;
+}
+
+.table-wrapper .profile-wrapper .top-three-2 {
+  background-color: rgb(199, 199, 199) !important;
+  color: rgb(94, 94, 94);
+}
+
+.table-wrapper .profile-wrapper .top-three-3 {
+  background-color: rgb(255, 153, 0) !important;
+  color: #a14023;
+}
+
+.table-wrapper .table-body .color-change {
+  background-color: blueviolet;
+  transition: all 0.6s ease-in-out;
+}
+
+.table-wrapper .table-body tr td .points-wrapper {
+  color: rgb(198 194 194);
+  padding-left: 7px;
+}
+
+@media only screen and (max-width: 768px) {
+  .table-wrapper .table-body tr td .points-wrapper {
+    display: none;
+  }
+}
